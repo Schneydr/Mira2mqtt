@@ -1,7 +1,12 @@
 # Mira2mqtt
 Monitor Ovum heatpumps with Mira firmware via VNC.
 
-Currently Ovum does not provide an official API to connect to their heat pumps running the new Mira firmware.
+> ⚠️ **PLEASE NOTE**
+> In newer firmware versions (>= 1.1.3), the VNC port is no longer open, so you will not have local access to the user interface.
+> In this case, you should use the official Modbus interface provided by Mira in these newer firmware versions.
+> https://www.facebook.com/ovumheatingtechnology/photos/modbus-ist-daab-sofort-in-mira-integriert-und-bereit-f%C3%BCr-noch-mehr-m%C3%B6glichkeiten/1579626904172832/
+
+In older firmware revsions, Ovum did not provide an official API to connect to their heat pumps running the Mira firmware.
 This software attempts to circumvent this by connecting to the VNC port provided by Mira and retrieving data via OCR (optical character recognition).
 The retrieved data is then sent to a MQTT broker, where it can be further processed, e.g., by a home automation solution such as OpenHAB, Home Assistant, and others.
 
